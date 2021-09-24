@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.ribbon {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	right: 100px;
+	top: 50px;
+	margin: auto;
+}
+
+.ribbon: after,
+.ribbon: before{
+	margin-top: 0.5em;
+	content: "";
+	display: flex;
+	;
+	border: 1.5em solid #fff;
+}
+
+.ribbon:after{
+	border-right-color: transparent;
+}
+
+.ribbon:before{
+	border-left-color: transparent;
+}
+
+.ribbon a:link,
+.ribbon a:visited{
+	/*这一句是切换栏的字体颜色*/
+	color: #1c2527;
+	text-decoration: none;
+	height: 3.5em;
+	overflow: hidden;
+}
+
+
+.ribbon span{
+	/*这一句是切换栏的背景颜色*/
+	background: hidden;
+	display: inline-block;
+	line-height: 1em;
+	padding: 0 2.8em;
+	margin-top: 0.5em;
+	position: relative;
+	-webkit-transition: background-color 0.2s, margin-top 0.2s;
+
+	-moz-transition: background-color 0.2s, margin-top 0.2s;
+
+	-ms-transition: background-color 0.2s, margin-top 0.2s;
+
+	-o-transition: background-color 0.2s, margin-top 0.2s;
+
+	transition: background-color 0.2s, margin-top 0.2s;
+}
+
+
+.ribbon a:hover span{
+	background: #d8e3d8;
+	margin-top: 0;
+	opacity: 60%;
+}
+
+
+
+
+
+.img{
+	display: flex;
+	flex-direction: column;
+}
+
+.img_item{
+	display: flex;
+	justify-content: center;
+	margin-top: 80px;
+}
+
+.img_item_img{
+	max-width: 85%;
+	max-height: 80%;
+}
+
+.breakline{
+	color: #1c2527;
+
+}

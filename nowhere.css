@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.nowhere {
+	height: 100%;
+	overflow: hidden;
+}
+
+.content {
+	perspective: 340px;
+	width: 100%;
+	position: relative;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
+span {
+	display: block;
+	text-align: center;
+}
+
+.stars{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 2px;
+	height: 2px;
+	z-index: 999;
+	border-radius: 50%;
+	box-shadow: -447px 387px #c4c4c4, -401px 118px #fafafa, -109px 217px #d9d9d9, -680px -436px #e3e3e3, 514px 360px #cccccc, -708px 298px #e8e8e8, -696px -270px #ededed, 116px -128px #f7f7f7, 179px 35px white, -404px -90px whitesmoke, -331px -309px #c4c4c4, -363px -24px #d1d1d1, 277px 416px #fafafa, -145px -244px whitesmoke, 123px 62px #d4d4d4, -407px 418px #d9d9d9, 535px 237px #d9d9d9, -466px -78px #f7f7f7, 257px 287px #dedede, 327px -398px #e0e0e0, -602px -38px #c2c2c2, 128px 398px #e6e6e6, 274px -446px #d1d1d1, -602px -298px #c7c7c7, 526px -5px #c4c4c4, -90px -158px #fcfcfc, 5px 294px whitesmoke, -633px 229px #c4c4c4, -475px 427px #dedede, 586px -453px #f2f2f2, 180px -432px #c7c7c7, -637px -88px #cfcfcf, -453px 308px #d6d6d6, -111px 1px #d9d9d9, 573px -450px #ededed, 198px 300px #d6d6d6, -355px 166px #dedede, -715px 13px #e3e3e3, 262px -104px #d1d1d1, 147px 325px #dbdbdb, 1px 399px #dbdbdb, 286px -100px white, 43px -329px #e8e8e8, 617px 55px #d9d9d9, -168px -392px #cccccc, 84px 219px #c9c9c9, 507px -226px #d9d9d9, -327px -70px #e6e6e6, 386px -212px #c4c4c4, -717px 4px #cfcfcf, 520px -231px #e3e3e3, 302px 56px #ededed, 649px 341px #c7c7c7, 569px 350px #c9c9c9, 516px -31px #e6e6e6, 689px 447px #c2c2c2, 591px -206px #fafafa, 422px -137px #e6e6e6;
+	animation: fly 15s linear infinite;
+	transform-style: preserve-3d;
+}
+
+.stars:before,
+.stars:after{
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	box-shadow: inherit;
+}
+
+.stars:before{
+	transform: translateZ(-300px);
+	opacity: .6;
+}
+
+.stars:after{
+	transform: translateZ(-600px);
+	opacity: .4;
+}
+
+@keyframes fly{
+	from{
+		transform: translateZ(0px);
+		opacity: .6;
+	}
+	to {
+		transform: translateZ(200px);
+		opacity: .8;
+	}
+}
+
+
+
+.title {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	right: 145px;
+	
+	top: 300px;
+	margin: auto;
+	bottom: 0;
+	color: #f8f8ff;
+	font-size: 20px;
+	font-weight: 500;
+	opacity: 0.8;
+}
+
+.ribbon {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	right: 100px;
+	top: 50px;
+	margin: auto;
+}
+
+.ribbon: after,
+.ribbon: before{
+	margin-top: 0.5em;
+	content: "";
+	display: flex;
+	;
+	border: 1.5em solid #fff;
+}
+
+.ribbon:after{
+	border-right-color: transparent;
+}
+
+.ribbon:before{
+	border-left-color: transparent;
+}
+
+.ribbon a:link,
+.ribbon a:visited{
+	/*这一句是切换栏的字体颜色*/
+	color: #778899;
+	text-decoration: none;
+	height: 3.5em;
+	overflow: hidden;
+}
+
+
+.ribbon span{
+	/*这一句是切换栏的背景颜色*/
+	background: hidden;
+	display: inline-block;
+	line-height: 1em;
+	padding: 0 2.8em;
+	margin-top: 0.5em;
+	position: relative;
+	-webkit-transition: background-color 0.2s, margin-top 0.2s;
+
+	-moz-transition: background-color 0.2s, margin-top 0.2s;
+
+	-ms-transition: background-color 0.2s, margin-top 0.2s;
+
+	-o-transition: background-color 0.2s, margin-top 0.2s;
+
+	transition: background-color 0.2s, margin-top 0.2s;
+}
+
+
+.ribbon a:hover span{
+	background: #fff0f5;
+	margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
